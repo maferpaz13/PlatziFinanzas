@@ -1,2 +1,3 @@
 # PlatziFinanzas
-App 
+
+App Curso Platzi Interfaces
