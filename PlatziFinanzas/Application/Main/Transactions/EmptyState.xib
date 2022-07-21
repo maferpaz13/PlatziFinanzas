@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="c8a-cc-he3">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyState" translatesAutoresizingMaskIntoConstraints="NO" id="dQ1-yy-Nq3">
+                    <rect key="frame" x="35.5" y="112" width="304" height="243"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="304" id="rvc-0R-X5N"/>
+                        <constraint firstAttribute="height" constant="243" id="tnR-eU-aKf"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To start press the add button" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alD-cq-gPR">
+                    <rect key="frame" x="20" y="466.5" width="335" height="23.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                    <color key="textColor" name="GrayColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acZ-7F-lPv">
+                    <rect key="frame" x="20" y="371" width="335" height="87.5"/>
+                    <string key="text">You don’t have
+any transactions</string>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
+                    <color key="textColor" name="GreenColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="NW6-2E-bJ6" firstAttribute="trailing" secondItem="alD-cq-gPR" secondAttribute="trailing" constant="20" id="88M-LI-AlO"/>
+                <constraint firstItem="acZ-7F-lPv" firstAttribute="top" secondItem="dQ1-yy-Nq3" secondAttribute="bottom" constant="16" id="Ayu-1z-xUh"/>
+                <constraint firstItem="alD-cq-gPR" firstAttribute="centerX" secondItem="acZ-7F-lPv" secondAttribute="centerX" id="LZl-u3-Afy"/>
+                <constraint firstItem="dQ1-yy-Nq3" firstAttribute="centerY" secondItem="c8a-cc-he3" secondAttribute="centerY" constant="-100" id="OpQ-lE-VyW"/>
+                <constraint firstItem="alD-cq-gPR" firstAttribute="top" secondItem="acZ-7F-lPv" secondAttribute="bottom" constant="8" id="Tb9-cm-ZjU"/>
+                <constraint firstItem="alD-cq-gPR" firstAttribute="leading" secondItem="NW6-2E-bJ6" secondAttribute="leading" constant="20" id="gTW-IL-m5O"/>
+                <constraint firstItem="dQ1-yy-Nq3" firstAttribute="centerX" secondItem="c8a-cc-he3" secondAttribute="centerX" id="jeS-dj-lzh"/>
+                <constraint firstItem="acZ-7F-lPv" firstAttribute="leading" secondItem="NW6-2E-bJ6" secondAttribute="leading" constant="20" id="mDS-ng-N7E"/>
+                <constraint firstItem="NW6-2E-bJ6" firstAttribute="trailing" secondItem="acZ-7F-lPv" secondAttribute="trailing" constant="20" id="rIr-V6-Hau"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="NW6-2E-bJ6"/>
+            <point key="canvasLocation" x="49" y="-270"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="EmptyState" width="308" height="245"/>
+        <namedColor name="GrayColor">
+            <color red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GreenColor">
+            <color red="0.62400001287460327" green="0.74099999666213989" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

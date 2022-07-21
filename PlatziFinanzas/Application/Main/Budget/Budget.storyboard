@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pqr-WS-2iy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Budget-->
+        <scene sceneID="Xwt-XV-Sp6">
+            <objects>
+                <viewController id="lTL-Ip-Kih" customClass="BudgetViewController" customModule="PlatziFinanzas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qpT-jA-DC3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Hr-T6-5mK">
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Tra-8Y-fYe">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7UJ-aA-Gn8">
+                                            <rect key="frame" x="37.5" y="4.5" width="100" height="35"/>
+                                            <color key="backgroundColor" name="GreenColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="22"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MNJ-V2-Gms">
+                                            <rect key="frame" x="37.5" y="-3" width="300" height="50"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZD4-G2-40C">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                                    <state key="normal" title="INCOMING">
+                                                        <color key="titleColor" name="TextColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="animateHeaderWithSender:" destination="lTL-Ip-Kih" eventType="touchUpInside" id="MfU-ot-ypW"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndk-cF-q20">
+                                                    <rect key="frame" x="100" y="0.0" width="100" height="50"/>
+                                                    <state key="normal" title="ALL">
+                                                        <color key="titleColor" name="TextColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="animateHeaderWithSender:" destination="lTL-Ip-Kih" eventType="touchUpInside" id="611-vM-gsV"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQ9-Xf-AvN">
+                                                    <rect key="frame" x="200" y="0.0" width="100" height="50"/>
+                                                    <state key="normal" title="EXPENSES">
+                                                        <color key="titleColor" name="TextColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="animateHeaderWithSender:" destination="lTL-Ip-Kih" eventType="touchUpInside" id="yXP-mg-Lnv"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="300" id="Jch-zH-jt0"/>
+                                                <constraint firstAttribute="height" constant="50" id="Veu-Ru-XQa"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="7UJ-aA-Gn8" firstAttribute="height" secondItem="ZD4-G2-40C" secondAttribute="height" constant="-15" id="2CI-GF-ezn"/>
+                                        <constraint firstItem="MNJ-V2-Gms" firstAttribute="centerY" secondItem="Tra-8Y-fYe" secondAttribute="centerY" id="2Ub-Qf-oUk"/>
+                                        <constraint firstItem="7UJ-aA-Gn8" firstAttribute="centerY" secondItem="Tra-8Y-fYe" secondAttribute="centerY" id="9GF-Nh-xd0"/>
+                                        <constraint firstItem="7UJ-aA-Gn8" firstAttribute="width" secondItem="ZD4-G2-40C" secondAttribute="width" id="AOb-Xv-wYb"/>
+                                        <constraint firstItem="7UJ-aA-Gn8" firstAttribute="leading" secondItem="MNJ-V2-Gms" secondAttribute="leading" id="O1G-BT-8c7"/>
+                                        <constraint firstAttribute="height" constant="44" id="ZU4-nl-dQA"/>
+                                        <constraint firstItem="MNJ-V2-Gms" firstAttribute="centerX" secondItem="Tra-8Y-fYe" secondAttribute="centerX" id="gFT-9Z-3KW"/>
+                                    </constraints>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="lTL-Ip-Kih" id="WxR-1g-pzL"/>
+                                    <outlet property="delegate" destination="lTL-Ip-Kih" id="15V-2q-w1O"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bmb-bs-DQr" firstAttribute="trailing" secondItem="8Hr-T6-5mK" secondAttribute="trailing" id="FJr-JV-a3T"/>
+                            <constraint firstItem="8Hr-T6-5mK" firstAttribute="top" secondItem="Bmb-bs-DQr" secondAttribute="top" id="Us0-uN-Q1S"/>
+                            <constraint firstItem="Bmb-bs-DQr" firstAttribute="bottom" secondItem="8Hr-T6-5mK" secondAttribute="bottom" id="WFp-bK-QHe"/>
+                            <constraint firstItem="8Hr-T6-5mK" firstAttribute="leading" secondItem="Bmb-bs-DQr" secondAttribute="leading" id="xW8-z4-9E0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bmb-bs-DQr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="notification" id="h0j-xc-YoG"/>
+                    <navigationItem key="navigationItem" title="Budget" id="Jjd-Z6-cI6"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="animationLayout" destination="O1G-BT-8c7" id="fb5-yt-1MI"/>
+                        <outlet property="tableView" destination="8Hr-T6-5mK" id="CyK-f4-1la"/>
+                        <outletCollection property="animationsButtons" destination="ZD4-G2-40C" collectionClass="NSMutableArray" id="VD9-02-rGD"/>
+                        <outletCollection property="animationsButtons" destination="HQ9-Xf-AvN" collectionClass="NSMutableArray" id="WNf-m9-pKu"/>
+                        <outletCollection property="animationsButtons" destination="ndk-cF-q20" collectionClass="NSMutableArray" id="vGg-Hw-INh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDe-bB-zqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2380" y="-768.66566716641682"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="aBl-5s-PIQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pqr-WS-2iy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1xO-Ii-C9c"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="TAf-D2-bav">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="GreenColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lTL-Ip-Kih" kind="relationship" relationship="rootViewController" id="ZbJ-Hm-BCE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfX-Dx-nU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440.8" y="-768.66566716641682"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="notification" width="20" height="26"/>
+        <namedColor name="GreenColor">
+            <color red="0.62400001287460327" green="0.74099999666213989" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.14117647058823529" green="0.15686274509803921" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
